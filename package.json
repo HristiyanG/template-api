@@ -1,0 +1,32 @@
+{
+  "name": "verify-investor-service",
+  "version": "1.0.0",
+  "description": "- users claim dividends",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoonify/verify-investor-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoonify/verify-investor-service/issues"
+  },
+  "homepage": "https://github.com/yoonify/verify-investor-service#readme",
+  "dependencies": {
+    "@google-cloud/firestore": "^2.4.0",
+    "@google-cloud/storage": "^4.2.0",
+    "@google-cloud/tasks": "^1.7.1",
+    "axios": "^0.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
