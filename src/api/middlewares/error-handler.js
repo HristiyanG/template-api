@@ -1,5 +1,4 @@
 const APIError = require('../api-error');
-const MulterError = require('multer').MulterError;
 
 class ErrorHandlers {
 
@@ -13,9 +12,6 @@ class ErrorHandlers {
     static apiErrorHandler (err, req, res, next) {
         if (err instanceof APIError) {
             res.status(err.code).json(err.message);
-        } else if (err instanceof MulterError) {
-            console.error(`An error occurred while uploading file for User [${res.locals.userId}]. Error message: ${err.message}`);
-            res.status(400).json(err.message);
         } else {
             // This should not happen. If an error is thrown using NEXT it should be API Error.
             console.error(`An error occurred. Normal error was thrown using next, and not using API Error object - ${err}. Error stack: ${err.stack}`);

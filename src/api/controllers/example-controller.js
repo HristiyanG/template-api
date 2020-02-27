@@ -12,7 +12,7 @@ class ExampleController {
 
     static exampleRouter(req, res, next) {
         res.status(200).json({
-            route: '/example',
+            route: '/examples',
             status: 200
         });
     }
